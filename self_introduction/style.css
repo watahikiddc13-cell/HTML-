@@ -1,0 +1,327 @@
+/* ================= リセット ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Noto Sans JP", sans-serif;
+  font-size:16px;
+  letter-spacing:0.05em;
+}
+
+/* ================= コンテナー ================= */
+.container{
+  width:90%;
+  max-width:1024px;
+  margin:0 auto;
+}
+
+/* ================= ヘッダー ================= */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background:#000000CC;
+  z-index:10;
+}
+
+header h1{
+  float:left;
+  margin-left:20px;
+  line-height:80px;
+  color:#fff;
+  font-size:26px;
+}
+
+.logo-t{
+  color:#A6ACFF;
+}
+
+/* nav */
+nav{
+  float:right;
+  margin-right:20px;
+}
+
+nav ul{
+  list-style:none;
+}
+
+nav li{
+  float:left;
+  margin-left:40px;
+  line-height:80px;
+}
+
+nav li:first-child{
+  margin-left:0;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* float解除 */
+header::after,
+nav ul::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+/* ================= メイン画像 ================= */
+.main-visual{
+  height:40vh;
+  background:url("images/main.jpg") center/cover no-repeat;
+}
+
+/* ★ここが重要（今回の正解） */
+main{
+  margin-top:80px;
+}
+
+/* ================= 共通 ================= */
+section{
+  margin-top:80px;
+}
+
+h2{
+  color:#4b52a7;
+  font-size:24px;
+  margin-bottom:40px;
+  text-align:center;
+}
+
+#gallery h2{
+  margin-bottom:80px;
+}
+
+h2 span{
+  font-size:14px;
+}
+
+h3{
+  color:#32839c;
+  font-size:16px;
+  border-bottom:1px solid #b7b7b7;
+  text-align:center;
+  margin-bottom:40px;
+}
+
+p{
+  font-size:16px;
+}
+
+/* ================= 自己紹介 ================= */
+#about p{
+  max-width:600px;
+  margin:0 auto 30px;
+  line-height:1.8;
+}
+
+.about-img{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.about-img img{
+  width:100%;
+  max-width:600px;
+}
+
+.about-flex{
+  display:flex;
+  justify-content:space-between;
+  margin-top:20px;
+}
+
+.about-box{
+  width:48%;
+  background:#8AB3DC;
+  border-radius:10px;
+  padding:20px 10px;
+}
+
+.about-box h3{
+  color:#fff;
+  border-bottom:1px solid #fff;
+  margin-bottom:10px;
+}
+
+.about-box h3 span{
+  display:block;
+  font-size:12px;
+}
+
+/* リスト */
+.hobby-box li,
+.site-box li{
+  line-height:30px;
+  margin:0 20px;
+}
+
+.hobby-box li{
+  color:#FEFFC7;
+}
+
+.site-box li{
+  color:#FFE8F6;
+}
+
+.site-box a{
+  color:#FFE8F6;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ================= ギャラリー ================= */
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.gallery-item{
+  width:25%;
+  text-align:center;
+}
+
+.gallery-item img{
+  width:90%;
+  margin:0 auto;
+  display:block;
+}
+
+.gallery-item h4{
+  width:90%;
+  margin:0 auto;
+  background:#758baf;
+  font-size:14px;
+  color:#fff;
+}
+
+.gallery-item p{
+  width:90%;
+  margin:4px auto 0;
+  font-size:12px;
+  text-align:left;
+}
+
+/* ================= フォーム ================= */
+form{
+  width:600px;
+  max-width:100%;
+  margin:0 auto;
+}
+
+label{
+  display:flex;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.required{
+  background:#32839c;
+  color:#fff;
+  font-size:13px;
+  border-radius:4px;
+  padding:2px 10px;
+  margin-right:10px;
+}
+
+input,
+textarea{
+  width:100%;
+  height:40px;
+  padding:10px;
+  border:1px solid #b7b7b7;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+textarea{
+  height:40px;
+}
+
+/* ================= ボタン ================= */
+.btn{
+  display:block;
+  margin:40px auto 80px;
+  width:300px;
+  height:40px;
+  background:#8ab3dc;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  box-shadow:0 4px 0 #818694;
+  cursor:pointer;
+}
+
+/* ================= フッター ================= */
+footer{
+  background:#8ab3dc;
+  height:120px;
+  text-align:center;
+}
+
+footer p{
+  padding-top:20px;
+  font-size:12px;
+  color:#fff;
+}
+
+/* ================= SP対応 ================= */
+@media(max-width:768px){
+
+header{
+  height:48px;
+}
+
+header h1{
+  font-size:20px;
+  line-height:48px;
+}
+
+nav{
+  display:none;
+}
+
+/* ★SP用も忘れず */
+main{
+  margin-top:48px;
+}
+
+.main-visual{
+  height:100vh;
+  background:url("images/main_sp.jpg") center/cover no-repeat;
+}
+
+.about-flex{
+  flex-direction:column;
+}
+
+.about-box{
+  width:100%;
+  margin-bottom:10px;
+}
+
+.gallery{
+  flex-direction:column;
+}
+
+.gallery-item{
+  width:100%;
+}
+
+.gallery-item img,
+.gallery-item h4,
+.gallery-item p{
+  width:80%;
+}
+
+}

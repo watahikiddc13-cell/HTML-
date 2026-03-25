@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taro Shuro's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1><span class="logo-t">T</span>aro Shuro's Portfolio</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#about">自己紹介</a></li>
+      <li><a href="#gallery">実装サンプル</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="main-visual"></div>
+
+<main>
+
+<section id="about">
+  <div class="container">
+    <h2>
+      自己紹介<br>
+      <span>Self Introduction</span>
+    </h2>
+
+    <p>
+      私の名前は<strong>就労太郎</strong>です。
+      アメリカ合衆国出身で現在はディーキャリアITエキスパートにて、
+      プログラミング学習に取り組んでおります。<br>
+      どうぞよろしくお願いいたします。
+    </p>
+
+    <div class="about-img">
+      <img src="images/img01.jpg" alt="自己紹介の画像">
+    </div>
+
+    <div class="about-flex">
+      <div class="about-box hobby-box">
+        <h3>好きなもの・趣味 <span>Favorites</span></h3>
+        <ul>
+          <li>スポーツ観戦</li>
+          <li>読書</li>
+          <li>アウトドア</li>
+        </ul>
+      </div>
+
+      <div class="about-box site-box">
+        <h3>Webサイト <span>Web Sites</span></h3>
+        <ul>
+          <li><a href="https://dd-career.com" target="_blank">ディーキャリア</a></li>
+          <li><a href="https://www.google.com" target="_blank">Google</a></li>
+          <li><a href="https://www.yahoo.co.jp" target="_blank">Yahoo! Japan</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>
+      実装サンプル<br>
+      <span>Sample</span>
+    </h2>
+
+    <h3>画像ギャラリー</h3>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/gallery01.jpg" alt="宇宙飛行士と月">
+        <h4>宇宙飛行士と月</h4>
+        <p>幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery02.jpg" alt="朝日と石">
+        <h4>朝日と石</h4>
+        <p>積み重ねられた石を、朝日が照らしています。</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery03.jpg" alt="鏡のような湖">
+        <h4>鏡のような湖</h4>
+        <p>空と海がどちらかわからなくなるような、鏡のような湖です。</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery04.jpg" alt="ハートの風船">
+        <h4>ハートの風船</h4>
+        <p>青空をバックに、たくさんの色とりどりのハートの風船が浮いています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h3>お問い合わせフォーム</h3>
+
+    <form>
+      <label><span class="required">必須</span>名前</label>
+      <input type="text">
+
+      <label><span class="required">必須</span>メールアドレス</label>
+      <input type="email">
+
+      <label><span class="required">必須</span>年齢</label>
+      <input type="text">
+
+      <label><span class="required">必須</span>お問い合わせ内容</label>
+      <textarea></textarea>
+
+      <!-- ★ここが修正ポイント -->
+      <button class="btn" type="submit">送信</button>
+    </form>
+  </div>
+</section>
+
+<section id="js-task">
+  <div class="container">
+    <h3>JavaScript課題</h3>
+
+    <!-- ★ここも修正 -->
+    <button id="runBtn" class="btn">実行！</button>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Copyright © 2022 Taro Shuro</p>
+</footer>
+
+<script>
+window.onload = function () {
+
+  const clickEvent = () => {
+
+    console.log("=== 課題① ===");
+
+    const persons = [
+      { name: "田中", age: 18 },
+      { name: "佐藤", age: 25 },
+      { name: "鈴木", age: 15 },
+      { name: "高橋", age: 30 }
+    ];
+
+    for (let i = 0; i < persons.length; i++) {
+
+      let name = persons[i].name;
+      let age = persons[i].age;
+
+      if (age < 20) {
+        let remain = 20 - age;
+        console.log(name + "さんの年齢は" + age + "歳です。20歳まで" + remain + "年です。");
+      } else {
+        console.log(name + "さんの年齢は" + age + "歳です。20歳を超えています。");
+      }
+
+    }
+
+    console.log("=== 課題② ===");
+
+    const numbers = [29342, 45342, 23419283, 148458552];
+
+    let j = 0;
+    while (j < numbers.length) {
+
+      let num = numbers[j];
+
+      let evenOdd = (num % 2 === 0) ? "偶数" : "奇数";
+      let remainder = num % 7;
+
+      console.log(num + " は " + evenOdd + " です。7で割ったあまりは " + remainder + " です。");
+
+      j++;
+    }
+
+  };
+
+  let button = document.getElementById("runBtn");
+  button.addEventListener("click", clickEvent);
+
+};
+</script>
+
+</body>
+</html>
